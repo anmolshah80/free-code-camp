@@ -1,0 +1,55 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.color-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.type-of-color,
+.color-code {
+  margin: 0;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.create-hex-color-button,
+.create-rgb-color-button {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+.copy-button {
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+}
