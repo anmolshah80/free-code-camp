@@ -6,3 +6,6 @@
 
 - Implement single selection and multi selection accordion for a web page.
 - Data created using FAQs from [Vihn Giang's Stage Academy](https://stageacademy.mykajabi.com/)
+
+- Multi Selection Accordion Design
+  ![Multi Selection Accordion Design](./multi-selection-project.png)
