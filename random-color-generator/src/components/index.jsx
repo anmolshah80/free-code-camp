@@ -55,7 +55,7 @@ export default function RandomColorGenerator() {
 
             handleCreateRandomHexColor();
           }}
-          className="create-hex-color-button"
+          className="hex-color-button"
         >
           Create HEX Color
         </button>
@@ -65,13 +65,13 @@ export default function RandomColorGenerator() {
 
             handleCreateRandomRgbColor();
           }}
-          className="create-rgb-color-button"
+          className="rgb-color-button"
         >
           Create RGB Color
         </button>
       </div>
       <div className="color-info">
-        <h3 className="type-of-color">
+        <h3 className="color-profile">
           {typeOfColor === 'rgb' ? 'RGB Code' : 'HEX Code'}
         </h3>
         <h1 className="color-code">{color}</h1>

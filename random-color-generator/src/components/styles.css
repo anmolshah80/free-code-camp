@@ -17,7 +17,7 @@
   margin-bottom: 6rem;
 }
 
-.type-of-color,
+.color-profile,
 .color-code {
   margin: 0;
 }
@@ -30,8 +30,8 @@
   margin-top: 1rem;
 }
 
-.create-hex-color-button,
-.create-rgb-color-button {
+.hex-color-button,
+.rgb-color-button {
   cursor: pointer;
   background-color: #ffffff;
   color: #000000;
