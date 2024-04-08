@@ -36,11 +36,6 @@ export default function RandomColorGenerator() {
   };
 
   useEffect(() => {
-    if (typeOfColor === 'rgb') handleCreateRandomRgbColor();
-    else handleCreateRandomHexColor();
-  }, [typeOfColor]);
-
-  useEffect(() => {
     if (copyButtonText === copyText) return;
 
     setTimeout(() => setCopyButtonText(copyText), [2000]);
