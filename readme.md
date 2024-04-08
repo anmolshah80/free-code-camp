@@ -9,3 +9,10 @@
 
 - Multi Selection Accordion Design
   ![Multi Selection Accordion Design](./multi-selection-project.png)
+
+### Project II - Random Color Generator
+
+- Work on the project to generate random HEX and RGB color codes.
+- Random Color Generator Design
+
+  ![Random Color Generator Design](./random-color-generator.png)
