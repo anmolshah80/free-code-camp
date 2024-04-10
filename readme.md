@@ -8,6 +8,7 @@
 - Data created using FAQs from [Vihn Giang's Stage Academy](https://stageacademy.mykajabi.com/)
 
 - Multi Selection Accordion Design
+
   ![Multi Selection Accordion Design](./multi-selection-project.png)
 
 ### Project II - Random Color Generator
@@ -16,3 +17,10 @@
 - Random Color Generator Design
 
   ![Random Color Generator Design](./random-color-generator.png)
+
+### Project III - Star Rating
+
+- Implement star rating using the icon from [react-icons](https://www.npmjs.com/package/react-icons)
+- Star Rating Design
+
+  ![Star Rating Design](./star-rating-design.png)

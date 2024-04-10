@@ -1,0 +1,11 @@
+.star-rating {
+  cursor: pointer;
+}
+
+.active {
+  color: #ffe338;
+}
+
+.inactive {
+  color: #000000;
+}
