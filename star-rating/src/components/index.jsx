@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
+import RenderStars from './RenderStars';
+
 import './styles.css';
-import { FaStar } from 'react-icons/fa';
 
 const StarRating = ({ numberOfStars = 5 }) => {
   const [rating, setRating] = useState(0);
@@ -20,27 +21,19 @@ const StarRating = ({ numberOfStars = 5 }) => {
   };
 
   return (
-    <div className="star-rating-wrapper">
+    <>
       <h1>Rate this product</h1>
       <div className="star-rating">
-        {[...Array(numberOfStars)].map((_, index) => {
-          index += 1;
-
-          const isStarHoveredOrRated = index <= (hover || rating);
-
-          return (
-            <FaStar
-              key={index}
-              onClick={() => handleClick(index)}
-              onMouseMove={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave()}
-              size={40}
-              className={isStarHoveredOrRated ? 'active' : 'inactive'}
-            />
-          );
-        })}
+        <RenderStars
+          numberOfStars={numberOfStars}
+          handleClick={handleClick}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          hover={hover}
+          rating={rating}
+        />
       </div>
-    </div>
+    </>
   );
 };
 
