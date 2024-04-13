@@ -24,3 +24,10 @@
 - Star Rating Design
 
   ![Star Rating Design](./star-rating-design.png)
+
+### Project IV - Image Slider
+
+- Implement image sliding using images from a [Picsum API]('https://picsum.photos/v2/list?page=2&limit=10')
+- Image Slider Design
+
+  ![Image Slider Design](./image-slider-design.png)
