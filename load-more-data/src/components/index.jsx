@@ -23,8 +23,6 @@ const LoadMoreData = ({ productsLimit = 10 }) => {
       const response = await fetch(apiUrl);
       const data = await response.json();
 
-      console.log(data);
-
       if (data && data.products.length !== 0)
         setProducts((previousData) => [...previousData, ...data.products]);
 
