@@ -31,3 +31,11 @@
 - Image Slider Design
 
   ![Image Slider Design](./image-slider-design.png)
+
+### Project V - Load More Data
+
+- Implement the feature to render data for infinite scorlling
+- JSON data taken from [Dummy JSON API](https://dummyjson.com/products?limit=20&skip=20)
+- Load More Data Design
+
+![Infinite Scrolling Design](./load-more-data-design.png)
