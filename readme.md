@@ -24,3 +24,10 @@
 - Star Rating Design
 
   ![Star Rating Design](./star-rating-design.png)
+
+### Project IV - Image Slider
+
+- Implement image sliding using images from an API
+- Image Slider Design
+
+  ![Image Slider Design](./image-slider-design.png)
