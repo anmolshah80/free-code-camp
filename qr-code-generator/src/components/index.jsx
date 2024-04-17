@@ -17,7 +17,7 @@ const QRCodeGenerator = () => {
   };
 
   useEffect(() => {
-    // invoking this function to generate the QR code for the default text `SIC PARVIS MAGNA`
+    // invoking this function to generate QR code for the default text `SIC PARVIS MAGNA`
     generateQrCode();
     setGenerateButtonDisabled(true);
   }, []);
