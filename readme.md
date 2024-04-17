@@ -45,4 +45,12 @@
 - Implement the feature to toggle the nested navigation menu options
 - Recursive Navigation Menu Design
 
-  ![Recursive Navigation Menu](./StaticImages/recursive-navigation%20-menu.png)
+  ![Recursive Navigation Menu](./StaticImages/recursive-navigation-menu.png)
+
+### Project VII - QR Code Generator
+
+- Implement a feature to generate a QR code based on input
+- QR code generated from the npm package [react-qr-code](https://www.npmjs.com/package/react-qr-code)
+- QR Code Generator Design
+
+  ![QR Code Generator Design](./StaticImages/qr-code-generator-design.png)
