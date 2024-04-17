@@ -11,17 +11,13 @@ const QRCodeGenerator = () => {
   const [validationMessage, setValidationMessage] = useState(null);
 
   const generateQrCode = () => {
-    setGenerateButtonDisabled(
-      inputValue && inputValue.trim() !== '' ? false : true,
-    );
-
-    if (inputValue.length > 25) return;
-
     setQrCode(inputValue);
     setInputValue('');
+    setGenerateButtonDisabled(true);
   };
 
   useEffect(() => {
+    // invoking this function to generate the QR code for the default text `SIC PARVIS MAGNA`
     generateQrCode();
     setGenerateButtonDisabled(true);
   }, []);
@@ -35,7 +31,7 @@ const QRCodeGenerator = () => {
       <h1 className="header">Generate QR Code</h1>
       <div className="qr-code-wrapper">
         <input
-          className={`text-input`}
+          className="text-input"
           style={
             isGenerateButtonDisabled
               ? { borderColor: 'rgba(118, 118, 118, 0.3)' }
