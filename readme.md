@@ -39,3 +39,11 @@
 - Load More Data Design
 
 ![Infinite Scrolling Design](./load-more-data-design.png)
+
+### Project VII - QR Code Generator
+
+- Implement a feature to generate a QR code based on input
+- QR code generated from the npm package [react-qr-code](https://www.npmjs.com/package/react-qr-code)
+- QR Code Generator Design
+
+  ![QR Code Generator Design](./StaticImages/qr-code-generator-design.png)
