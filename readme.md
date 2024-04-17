@@ -49,8 +49,12 @@
 
 ### Project VII - QR Code Generator
 
-- Implement a feature to generate a QR code based on input
+- Implement the feature to generate a QR code based on user's input
 - QR code generated from the npm package [react-qr-code](https://www.npmjs.com/package/react-qr-code)
 - QR Code Generator Design
 
   ![QR Code Generator Design](./StaticImages/qr-code-generator-design.png)
+
+### Project VIII - Theme Switch
+
+- Implement the feature to toggle between light and dark modes
