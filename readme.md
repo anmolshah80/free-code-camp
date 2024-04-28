@@ -58,3 +58,7 @@
 ### Project VIII - Theme Switch
 
 - Implement the feature to toggle between light and dark modes
+- Add a custom hook `useLocalStorage` to set and update the value for theme and change the UI based on its value
+- Theme Switch Design
+
+  ![Theme Switch Design](./StaticImages/theme-switch-design.png)
