@@ -48,7 +48,7 @@
   background-color: #003153;
 }
 
-h1 {
+.page-title {
   color: #ffffff;
 }
 
@@ -68,4 +68,8 @@ h1 {
   background: #10898d;
   width: 0;
   border-right: 3px solid #ffffff;
+}
+
+.hide-progress-bar-border {
+  border-right: none;
 }

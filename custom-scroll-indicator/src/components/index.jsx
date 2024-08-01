@@ -42,9 +42,8 @@ const ScrollIndicator = ({ apiUrl }) => {
   }, []);
 
   const progressBarWidth = `${scrollPercentage}%`;
-  const progressBarBorder = scrollPercentage === 0 && 'none';
-
-  console.log('Scroll Percentage: ', scrollPercentage);
+  const hideProgressBarBorder =
+    scrollPercentage === 0 && 'hide-progress-bar-border';
 
   if (loading) return <AiOutlineLoading className="loading-icon" />;
 
@@ -54,11 +53,11 @@ const ScrollIndicator = ({ apiUrl }) => {
   return (
     <>
       <article className="top-container">
-        <h1>Linear Scroll Indicator</h1>
+        <h1 className="page-title">Linear Scroll Indicator</h1>
         <section className="scroll-progress-tracking-container">
           <div
-            className="current-progress-bar"
-            style={{ width: progressBarWidth, borderRight: progressBarBorder }}
+            className={`current-progress-bar ${hideProgressBarBorder}`}
+            style={{ width: progressBarWidth }}
           ></div>
         </section>
       </article>
