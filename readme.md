@@ -62,3 +62,11 @@
 - Theme Switch Design
 
   ![Theme Switch Design](./StaticImages/theme-switch-design.png)
+
+### Project IX - Custom Linear Scroll Indicator
+
+- Implement the feature to display the scroll indicator as the horizontol line at the top of the page as the page is scrolled down
+- JSON data taken from [Dummy JSON API](https://dummyjson.com/products?limit=100)
+- Custom Linear Scroll Indicator Design
+
+  ![Custom Linear Scroll Indicator Design](./StaticImages/custom-linear-scroll-indicator-design.png)
