@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import fetchData from 'lib/fetchData';
 
 import { AiOutlineLoading } from 'react-icons/ai';
+import { RxCross1 } from 'react-icons/rx';
 
 import './styles.css';
 
@@ -61,9 +62,18 @@ const ScrollIndicator = ({ apiUrl }) => {
           ></div>
         </section>
       </article>
-      <div className="data-container">
-        <ProductTitle data={data} />
-      </div>
+      <section className="circular-scroll-container">
+        <div className="data-container">
+          <ProductTitle data={data} />
+        </div>
+        <div className="cross-icon-container">
+          <div
+            className={`circular-progress-bar`}
+            style={{ width: progressBarWidth }}
+          ></div>
+          <RxCross1 className="cross-icon circular-indicator" />
+        </div>
+      </section>
     </>
   );
 };
