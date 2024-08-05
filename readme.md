@@ -70,3 +70,10 @@
 - Custom Linear Scroll Indicator Design
 
   ![Custom Linear Scroll Indicator Design](./StaticImages/custom-linear-scroll-indicator-design.png)
+
+### Project XI - Dynamic Tabs
+
+- Implement the feature to display the content based on tabs
+- Dynamic Tabs Design
+
+  ![Dynamic Tabs](./StaticImages/dynamic-tabs-design.png)
