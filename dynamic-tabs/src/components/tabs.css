@@ -1,4 +1,4 @@
-.wrapper {
+.container {
   padding: 0.5rem;
 }
 
@@ -28,7 +28,6 @@
 
 .content {
   padding: 1.2rem 0.7rem;
-  height: 300px;
-  overflow: auto;
+  height: 18.75rem;
   background-color: #ffffff;
 }

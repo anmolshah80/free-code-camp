@@ -1,10 +1,10 @@
 import Tabs from 'components/Tabs';
 
-const Tab3 = () => {
+const ThirdTab = () => {
   return <div>This is content for tab 3</div>;
 };
 
-const TabTest = () => {
+const TabContent = () => {
   const tabsContent = [
     {
       label: 'Tab 1',
@@ -16,15 +16,11 @@ const TabTest = () => {
     },
     {
       label: 'Tab 3',
-      content: <Tab3 />,
+      content: <ThirdTab />,
     },
   ];
 
-  const handleChange = (currentTabIndex) => {
-    console.log(currentTabIndex);
-  };
-
-  return <Tabs tabsContent={tabsContent} onChange={handleChange} />;
+  return <Tabs tabsContent={tabsContent} />;
 };
 
-export default TabTest;
+export default TabContent;
