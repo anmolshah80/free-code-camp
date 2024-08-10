@@ -77,3 +77,12 @@
 - Dynamic Tabs Design
 
   ![Dynamic Tabs](./StaticImages/dynamic-tabs-design.png)
+
+### Project XII - Modal Popup
+
+- Implement the feature to display the modal popup upon clicking a button
+- Use `setTimeout` function to delay the opening of the modal once the `Try again` button is clicked to mock the behaviour of fetching the data from an API, and rendering a loading icon meanwhile
+- Add animation to render the modal from the bottom of the page
+- [Modal Popup Design](https://www.patternfly.org/components/modal/design-guidelines#error-dialogs)
+
+  ![Modal Popup Design](./StaticImages/modal-popup-design.png)
