@@ -101,3 +101,6 @@ _Important Notes:_
     - [flutter/website](https://github.com/flutter/website/pull/10515/files)
     - [React's useRef](https://react.dev/reference/react/useRef#examples-dom)
 - Press `Enter` key to search for the _username_ typed without having to click the `Search` button manually
+- GitHub Profile Finder Design
+
+  ![GitHub Profile Finder](./StaticImages/github-profile-finder-design.png)
