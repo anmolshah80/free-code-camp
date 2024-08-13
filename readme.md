@@ -2,6 +2,11 @@
 
 ## [Build 25 React Projects](https://www.youtube.com/watch?v=5ZdHfJVAY-s)
 
+_Important Notes:_
+
+- Add the `jsconfig.json` file whenever a new react project is created to always use **absolute paths** to import modules
+- Restart your react server once this file is added to avoid compilation errors
+
 ### Project I - Accordion
 
 - Implement single selection and multi selection accordion for a web page.
@@ -86,3 +91,13 @@
 - [Modal Popup Design](https://www.patternfly.org/components/modal/design-guidelines#error-dialogs)
 
   ![Modal Popup Design](./StaticImages/modal-popup-design.png)
+
+### Project XIII - GitHub Profile Finder
+
+- Implement the feature to fetch the GitHub Profile of a user based on their username
+- Type the key `/` (forward slash) to focus the search box directly
+  - Implementation Sources:
+    - [iterative/dvc.org](https://github.com/iterative/dvc.org/pull/2478/files)
+    - [flutter/website](https://github.com/flutter/website/pull/10515/files)
+    - [React's useRef](https://react.dev/reference/react/useRef#examples-dom)
+- Press `Enter` key to search for the _username_ typed without having to click the `Search` button manually
