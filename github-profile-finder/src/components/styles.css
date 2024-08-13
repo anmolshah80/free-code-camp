@@ -42,9 +42,9 @@
 .github-profile-container {
   margin: 0 auto;
   width: 90%;
-  max-width: 1000px;
-  padding: 20px;
-  border-radius: 8px;
+  max-width: 62.5rem;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
 }
 
 .input-wrapper {
@@ -55,38 +55,67 @@
 }
 
 .user {
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  border: 0.125rem solid #005b8f;
 }
 
 .user-avatar {
-  height: 150px;
+  height: 9.275rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
 
 .search-input {
-  border: 1px solid #005b8f;
+  border: 0.063rem solid #005b8f;
   outline: none;
   width: 18rem;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  padding: 11px;
-  font-size: 16px;
+  border-top-left-radius: 0.188rem;
+  border-bottom-left-radius: 0.188rem;
+  padding: 0.688rem;
+  font-size: 1rem;
 }
 
 .submit-input {
-  padding: 12px;
+  padding: 0.75rem;
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 0.188rem;
+  border-bottom-right-radius: 0.188rem;
   background-color: buttonface;
 }
 
 .submit-input:hover {
   color: #ffffff;
   background-color: #005b8f;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.slash-key {
+  position: absolute;
+  margin-right: 1rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.188rem;
+  text-align: center;
+  align-self: center;
+  font-size: 1.3rem;
+  background-color: #005b8f;
+  color: #ffffff;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slash-key-hide {
+  display: none;
 }

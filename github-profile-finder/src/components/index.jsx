@@ -1,20 +1,20 @@
 import { useEffect, useState, useRef } from 'react';
 import { AiOutlineLoading } from 'react-icons/ai';
 
-import User from 'components/User';
-
 import fetchGitHubUserProfile from 'lib/fetchGitHubUserProfile';
+
+import UserProfileDetail from 'components/UserProfileDetail';
 
 import './styles.css';
 
-const RenderProfileDetails = ({ userProfileData, errorMessage }) => {
-  if (!userProfileData) return null;
+const RenderProfileDetails = ({ profileData, errorMessage }) => {
+  if (!profileData) return null;
 
   if (errorMessage) {
     return <p className="error-message">Error: {errorMessage}</p>;
   }
 
-  return <User userProfileData={userProfileData} />;
+  return <UserProfileDetail profileData={profileData} />;
 };
 
 const GithubProfileFinder = () => {
@@ -22,9 +22,10 @@ const GithubProfileFinder = () => {
   const slashKeyCounterRef = useRef(0);
 
   const [username, setUsername] = useState('anmolshah80');
-  const [userProfileData, setUserProfileData] = useState(null);
+  const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [slashHotkeyClassName, setSlashHotkeyClassName] = useState('slash-key');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,13 +33,14 @@ const GithubProfileFinder = () => {
     if (!username) return;
 
     setErrorMessage(null);
+    setSlashHotkeyClassName('slash-key');
 
     slashKeyCounterRef.current = 0;
 
     fetchGitHubUserProfile(
       setUsername,
       setLoading,
-      setUserProfileData,
+      setProfileData,
       setErrorMessage,
       username,
     );
@@ -48,7 +50,7 @@ const GithubProfileFinder = () => {
     fetchGitHubUserProfile(
       setUsername,
       setLoading,
-      setUserProfileData,
+      setProfileData,
       setErrorMessage,
       username,
     );
@@ -95,24 +97,31 @@ const GithubProfileFinder = () => {
     <div className="github-profile-container">
       <div className="input-wrapper">
         <form onSubmit={handleSubmit}>
-          <input
-            id="search-input"
-            name="search-by-username"
-            type="text"
-            placeholder="Type Your GitHub Username"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-            className="search-input"
-            ref={searchInputRef}
-            onBlur={() => {
-              slashKeyCounterRef.current = 0;
-            }}
-          />
+          <div className="search-input-container">
+            <input
+              id="search-input"
+              name="search-by-username"
+              type="text"
+              placeholder="Type Your GitHub Username"
+              value={username}
+              onChange={(event) => setUsername(event.target.value)}
+              className="search-input"
+              ref={searchInputRef}
+              onBlur={() => {
+                slashKeyCounterRef.current = 0;
+                setSlashHotkeyClassName('slash-key');
+              }}
+              onFocus={() => {
+                setSlashHotkeyClassName('slash-key-hide');
+              }}
+            />
+            <span className={slashHotkeyClassName}>/</span>
+          </div>
           <input className="submit-input" type="submit" value="Search" />
         </form>
       </div>
       <RenderProfileDetails
-        userProfileData={userProfileData}
+        profileData={profileData}
         errorMessage={errorMessage}
       />
     </div>
