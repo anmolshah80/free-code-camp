@@ -50,7 +50,7 @@ _Important Notes:_
 - Implement the feature to toggle the nested navigation menu options
 - Recursive Navigation Menu Design
 
-  ![Recursive Navigation Menu](./StaticImages/recursive-navigation-menu.png)
+  ![Recursive Navigation Menu Design](./StaticImages/recursive-navigation-menu.png)
 
 ### Project VII - QR Code Generator
 
@@ -81,7 +81,7 @@ _Important Notes:_
 - Implement the feature to display the content based on tabs
 - Dynamic Tabs Design
 
-  ![Dynamic Tabs](./StaticImages/dynamic-tabs-design.png)
+  ![Dynamic Tabs Design](./StaticImages/dynamic-tabs-design.png)
 
 ### Project XII - Modal Popup
 
@@ -103,4 +103,13 @@ _Important Notes:_
 - Press `Enter` key to search for the _username_ typed without having to click the `Search` button manually
 - GitHub Profile Finder Design
 
-  ![GitHub Profile Finder](./StaticImages/github-profile-finder-design.png)
+  ![GitHub Profile Finder Design](./StaticImages/github-profile-finder-design.png)
+
+### Project XIV - Search Autocomplete
+
+- Implement the feature to autocomplete the search when typing the user's _first or last name_
+- Type the `/` (forward slash) key to focus on the search input bar automatically
+- Click on the search results to render their profile details in a card below the search input bar
+- Search Autocomplete Design
+
+  ![Search Autocomplete Design](./StaticImages/search-autocomplete-design.png)
