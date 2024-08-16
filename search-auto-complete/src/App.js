@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
 import SearchAutoComplete from 'components';
+
+import './App.css';
 
 function App() {
   return (

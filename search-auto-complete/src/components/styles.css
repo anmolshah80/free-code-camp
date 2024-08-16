@@ -55,7 +55,7 @@
 }
 
 .search-input {
-  border: 2px solid #005b8f;
+  border: 0.125rem solid #005b8f;
   outline: none;
   width: 24rem;
   border-top-left-radius: 0.188rem;
@@ -82,10 +82,10 @@
 
 .search-results-container {
   width: 25.45rem;
-  border: 1px solid #000000;
+  border: 0.063rem solid #000000;
   border-top: none;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0.188rem;
+  border-bottom-right-radius: 0.188rem;
   text-align: left;
   margin-top: 0;
   padding-bottom: 0.5rem;
@@ -104,14 +104,14 @@
 }
 
 .user-details-container {
-  border: 1px solid #005b8f;
-  border-radius: 3px;
+  border: 0.063rem solid #005b8f;
+  border-radius: 0.188rem;
   margin-top: 2rem;
   width: 80%;
 }
 
 .user-avatar {
-  height: 125px;
+  height: 7.813rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: antiquewhite;

@@ -48,8 +48,6 @@ const SearchAutoComplete = () => {
   const handleSearchResultClick = (id) => {
     const searchResult = filteredUsers.find((item) => item.id === id);
 
-    debugger;
-
     setSearchParam(`${searchResult.firstName} ${searchResult.lastName}`);
     setSelectedSearchResult(searchResult);
 

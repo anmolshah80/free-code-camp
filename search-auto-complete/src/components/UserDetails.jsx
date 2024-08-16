@@ -1,3 +1,5 @@
+import concatenateFirstAndLastNames from 'utils/concatenateFirstAndLastNames';
+
 const UserDetails = ({ userData }) => {
   if (!userData) return null;
 
@@ -18,10 +20,10 @@ const UserDetails = ({ userData }) => {
       <p>User Details</p>
       <img
         src={image}
-        alt={`${firstName} ${lastName}'s Avatar`}
+        alt={`${concatenateFirstAndLastNames(firstName, lastName)}'s Avatar`}
         className="user-avatar"
       />
-      <p>{firstName + ' ' + lastName}</p>
+      <p>{concatenateFirstAndLastNames(firstName, lastName)}</p>
       <p>Email Address: {emailAddress}</p>
       <p>Phone No.: {phoneNumber}</p>
       <p>Date of Birth: {birthDate}</p>

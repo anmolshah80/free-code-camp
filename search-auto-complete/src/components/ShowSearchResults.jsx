@@ -1,3 +1,5 @@
+import concatenateFirstAndLastNames from 'utils/concatenateFirstAndLastNames';
+
 const ShowSearchResults = ({ filteredData, handleSearchResultClick }) => {
   if (filteredData.length === 0) return null;
 
@@ -9,7 +11,7 @@ const ShowSearchResults = ({ filteredData, handleSearchResultClick }) => {
           className="search-result"
           onClick={() => handleSearchResultClick(item.id)}
         >
-          {item.firstName} {item.lastName}
+          {concatenateFirstAndLastNames(item.firstName, item.lastName)}
         </li>
       ))}
     </ul>

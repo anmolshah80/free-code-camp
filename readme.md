@@ -107,7 +107,7 @@ _Important Notes:_
 
 ### Project XIV - Search Autocomplete
 
-- Implement the feature to autocomplete the search when typing the user's first or last name
+- Implement the feature to autocomplete the search when typing the user's _first or last name_
 - Type the `/` (forward slash) key to focus on the search input bar automatically
 - Click on the search results to render their profile details in a card below the search input bar
 - Search Autocomplete Design
