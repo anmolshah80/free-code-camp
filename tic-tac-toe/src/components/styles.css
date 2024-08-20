@@ -1,0 +1,56 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100dvh;
+  margin: auto;
+  inset: 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.page-title {
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.square {
+  border: 1px solid #a3aabe;
+  float: left;
+  font-size: 40px;
+  height: 100px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  background-color: #595959;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+.restart-button {
+  padding: 1.25rem 2rem;
+  background-color: #a3aabe;
+  color: #000000;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.winning-square {
+  color: #a3aabe;
+}
+
+.game-status {
+  margin-block: 2rem;
+  font-size: 1.5rem;
+}
+
+.disable-square-button {
+  cursor: not-allowed;
+}

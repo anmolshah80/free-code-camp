@@ -113,3 +113,7 @@ _Important Notes:_
 - Search Autocomplete Design
 
   ![Search Autocomplete Design](./StaticImages/search-autocomplete-design.png)
+
+### Project XV - Tic Tac Toe
+
+- Implement the game of Tic Tac Toe
