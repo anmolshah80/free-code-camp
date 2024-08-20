@@ -15,8 +15,6 @@ const FeatureFlagGlobalState = ({ children }) => {
     try {
       const response = await featureFlagsDataServiceCall();
 
-      console.log(response);
-
       setEnabledFlags(response);
       setLoading(false);
     } catch (error) {
