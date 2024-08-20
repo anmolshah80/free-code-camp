@@ -113,3 +113,10 @@ _Important Notes:_
 - Search Autocomplete Design
 
   ![Search Autocomplete Design](./StaticImages/search-autocomplete-design.png)
+
+### Project XVI - Feature Flags
+
+- Implement the feature to render the featured components from a dummy API based on each of its _enabled status_
+- Feature Flags Design
+
+  ![Feature Flags Design](./StaticImages/feature-flags-design.png)
