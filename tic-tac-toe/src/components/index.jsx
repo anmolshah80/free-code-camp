@@ -36,7 +36,7 @@ const TicTacToe = () => {
   const [gameStatus, setGameStatus] = useState('');
   const [winningPatternSquareID, setWinningPatternSquareID] =
     useState('square-');
-  const [playerConfiguration, setPlayerConfiguration] = useState({
+  const [gameConfiguration, setGameConfiguration] = useState({
     computerMove: null,
     playerMove: null,
     isPlayingAgainstComputer: true,
@@ -52,7 +52,7 @@ const TicTacToe = () => {
     let squaresCopy = [...squares];
     console.log(squares);
 
-    const { playerMove, isPlayingAgainstComputer } = playerConfiguration;
+    const { playerMove, isPlayingAgainstComputer } = gameConfiguration;
 
     if (!isPlayingAgainstComputer) {
       squaresCopy[currentSquare] = isItXsTurn ? 'X' : 'O';
@@ -96,6 +96,11 @@ const TicTacToe = () => {
   };
 
   const handleGameRestart = () => {
+    // if every square box is empty then allow restarting the game
+    const isEmpty = (currentValue) => currentValue === '';
+
+    if (squares.every(isEmpty)) return;
+
     const { winningPattern } = getWinner(squares);
 
     if (winningPattern) {
@@ -106,14 +111,14 @@ const TicTacToe = () => {
       document.getElementById(`square-${z}`).classList.remove('winning-square');
     }
 
-    const { isPlayingAgainstComputer } = playerConfiguration;
+    const { isPlayingAgainstComputer } = gameConfiguration;
 
     if (!isPlayingAgainstComputer) {
       setIsItXsTurn(true);
     }
 
     setSquares(Array(9).fill(''));
-    setPlayerConfiguration({
+    setGameConfiguration({
       computerMove: null,
       playerMove: null,
       isPlayingAgainstComputer: true,
@@ -121,46 +126,118 @@ const TicTacToe = () => {
     assignSymbolsToPlayers();
   };
 
+  const nextMoveForComputer = (indexes) => {
+    const { playerOMoveIndexes, playerXMoveIndexes, emptySquaresIndexes } =
+      indexes;
+
+    for (let i = 0; i < WINNING_PATTERNS.length; i++) {
+      const [x, y, z] = WINNING_PATTERNS[i];
+
+      // remove the pattern where all the squares have been filled/marked/selected
+      if (squares[x] && squares[y] && squares[z]) {
+        continue;
+      }
+
+      // the 2 moves present in squares matches with the patterns
+      // if ([x, y, z].includes(playerXMoveIndexes)) {
+      // }
+
+      // return the next move for computer that blocks the move for player to win
+      if (squares[x] && squares[x] === squares[y]) {
+        return z;
+      } else if (squares[x] && squares[x] === squares[z]) {
+        return y;
+      } else if (squares[y] && squares[y] === squares[z]) {
+        return x;
+      } else {
+        debugger;
+        return emptySquaresIndexes[
+          Math.floor(Math.random() * emptySquaresIndexes.length)
+        ];
+      }
+    }
+  };
+
+  const randomSquareToFill = (indexes) => {
+    const { playerMove } = gameConfiguration;
+
+    const { playerXMoveIndexes, playerOMoveIndexes, emptySquaresIndexes } =
+      indexes;
+
+    if (playerMove === 'X') {
+      return nextMoveForComputer(indexes);
+    } else if (playerMove === 'O') {
+      return nextMoveForComputer(indexes);
+    } else {
+      return emptySquaresIndexes[
+        Math.floor(Math.random() * emptySquaresIndexes.length)
+      ];
+    }
+  };
+
   useEffect(() => {
     if (player === 'you') return;
 
-    const { computerMove } = playerConfiguration;
+    const { computerMove } = gameConfiguration;
 
     // allow the computer to select only the square which is empty
     if (player === 'computer') {
       setTimeout(() => {
         const allSquares = document.querySelectorAll('.square');
-        allSquares.forEach((button) => (button.disabled = true));
+        allSquares.forEach(
+          (button) => (
+            (button.disabled = true),
+            button.classList.add('disable-square-button')
+          ),
+        );
 
         // get the position of each of these empty squares and then use the computer's turn to fill one randomly
-        const indexes = [];
+        const emptySquaresIndexes = [];
+        const playerXMoveIndexes = [];
+        const playerOMoveIndexes = [];
 
         for (let i = 0; i < squares.length; i++) {
-          if (squares[i] === '') {
-            indexes.push(i);
+          if (squares[i] === 'X') {
+            playerXMoveIndexes.push(i);
+          } else if (squares[i] === 'O') {
+            playerOMoveIndexes.push(i);
+          } else if (squares[i] === '') {
+            emptySquaresIndexes.push(i);
           }
         }
 
-        console.log('indexes: ', indexes);
+        const indexes = {
+          playerXMoveIndexes,
+          playerOMoveIndexes,
+          emptySquaresIndexes,
+        };
+
+        // console.log('emptySquaresIndexes: ', emptySquaresIndexes);
 
         // TODO: add your move based on the winning pattern and block your opponents win with your move
-        const randomSquareToFill =
-          indexes[Math.floor(Math.random() * indexes.length)];
+        const squareToFill = randomSquareToFill(indexes);
 
-        console.log('randomSquareToFill: ', randomSquareToFill);
+        console.log('squareToFill: ', squareToFill);
 
-        handleClick(randomSquareToFill, computerMove);
+        handleClick(squareToFill, computerMove);
+
+        console.log(indexes);
 
         setPlayer('you');
-        allSquares.forEach((button) => (button.disabled = false));
+        allSquares.forEach(
+          (button) => (
+            (button.disabled = false),
+            button.classList.remove('disable-square-button')
+          ),
+        );
       }, 1500);
     }
-  }, [squares, player]);
+  }, [squares, player, gameConfiguration]);
 
   // useEffect(() => {
   //   const { winningPattern, winner } = getWinner(squares);
   //   const { computerMove, playerMove, isPlayingAgainstComputer } =
-  //     playerConfiguration;
+  //     gameConfiguration;
 
   //   if (!winner && squares.every((item) => item !== '')) {
   //     setGameStatus("It's a draw");
@@ -186,17 +263,16 @@ const TicTacToe = () => {
   // }, [squares, isItXsTurn]);
 
   const assignSymbolsToPlayers = () => {
-    // if the computer has already selected a symbol i.e., `X` or `O` then skip the selection again
     const randomNumber = Math.random();
 
     if (randomNumber < 0.5) {
-      setPlayerConfiguration((previousData) => ({
+      setGameConfiguration((previousData) => ({
         ...previousData,
         computerMove: 'X',
         playerMove: 'O',
       }));
     } else {
-      setPlayerConfiguration((previousData) => ({
+      setGameConfiguration((previousData) => ({
         ...previousData,
         computerMove: 'O',
         playerMove: 'X',
@@ -213,7 +289,7 @@ const TicTacToe = () => {
   useEffect(() => {
     const { winningPattern, winner } = getWinner(squares);
     const { computerMove, playerMove, isPlayingAgainstComputer } =
-      playerConfiguration;
+      gameConfiguration;
 
     if (!winner && squares.every((item) => item !== '')) {
       setGameStatus("It's a draw");
@@ -236,7 +312,7 @@ const TicTacToe = () => {
         );
       }
     }
-  }, [squares, player, playerConfiguration]);
+  }, [squares, player, gameConfiguration]);
 
   return (
     <div className="game-container">
