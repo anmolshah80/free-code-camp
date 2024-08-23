@@ -1,5 +1,6 @@
-import useOnClickOutside from 'hooks/useOnClickOutside';
 import { useRef, useState } from 'react';
+
+import useOnClickOutside from 'hooks/useOnClickOutside';
 
 const ShowContentOnClick = () => {
   const contentRef = useRef(null);

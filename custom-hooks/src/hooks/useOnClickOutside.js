@@ -4,7 +4,6 @@ const useOnClickOutside = (contentRef, hideContent) => {
   useEffect(() => {
     const listener = (event) => {
       if (!contentRef.current || contentRef.current.contains(event.target)) {
-        debugger;
         return;
       }
 
