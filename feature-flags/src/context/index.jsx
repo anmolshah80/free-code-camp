@@ -18,7 +18,6 @@ const FeatureFlagGlobalState = ({ children }) => {
       setEnabledFlags(response);
       setLoading(false);
     } catch (error) {
-      debugger;
       setErrorMessage(error.message);
       setLoading(false);
     }
