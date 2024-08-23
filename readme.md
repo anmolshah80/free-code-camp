@@ -120,3 +120,13 @@ _Important Notes:_
 - Feature Flags Design
 
   ![Feature Flags Design](./StaticImages/feature-flags-design.png)
+
+### Project XVII - Custom Hooks
+
+- Implement `useFetch`, `useOnClickOutside`, and `useWindowResize` custom hooks from scratch
+- `useFetch` hook takes a `url` and an optional `options` arguments to fetch data from an API, and set the incoming data to a state variable and return that variable
+- `useOnClickOutside` hook takes the main content element's ref i.e., `contentRef` and a callback function i.e., `hideContent` as arguments to render the content when the button is clicked and hide it from the page once the user clicks outside the content area
+- `useWindowResize` hook takes no arguments and returns the window's _width_ and _height_ in real time whenever its resized
+- Custom Hooks Design
+
+  ![Custom Hooks Design](./StaticImages/custom-hooks-design.png)
