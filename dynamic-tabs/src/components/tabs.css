@@ -1,0 +1,33 @@
+.container {
+  padding: 0.5rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.tab-item {
+  display: inline-flex;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: #cc8899; /* Puce color code*/
+}
+
+.tab-item.active {
+  border-color: #000000;
+  background: #4e016a;
+  color: #ffffff;
+}
+
+.content {
+  padding: 1.2rem 0.7rem;
+  height: 18.75rem;
+  background-color: #ffffff;
+}
