@@ -32,7 +32,7 @@ const RenderProducts = () => {
   }
 
   return (
-    <div>
+    <div className="products-container">
       <h1>useFetch Hook</h1>
       <RenderProductTitles data={data} />
     </div>

@@ -1,5 +1,6 @@
 import RenderProducts from 'components/RenderProducts';
 import ShowContentOnClick from 'components/ShowContentOnClick';
+import RenderWindowSize from 'components/RenderWindowSize';
 
 import './App.css';
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <RenderProducts />
       <ShowContentOnClick />
+      <RenderWindowSize />
     </div>
   );
 }

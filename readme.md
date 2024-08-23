@@ -124,5 +124,9 @@ _Important Notes:_
 ### Project XVII - Custom Hooks
 
 - Implement `useFetch`, `useOnClickOutside`, and `useWindowResize` custom hooks from scratch
-- `useFetch` hook takes `url` and an optional `options` parameters to fetch data from an API
-- `useOnClickOutside` hook takes an element ref `contentRef` and a callback function `hideContent` as paramters to render the content when the button is clicked and hide the content from the page once its clicked outside the content area
+- `useFetch` hook takes a `url` and an optional `options` arguments to fetch data from an API, and sets the incoming data to a state and returns that state variable
+- `useOnClickOutside` hook takes the main content element's ref i.e., `contentRef` and a callback function i.e., `hideContent` as arguments to render the content when the button is clicked and hide it from the page once the user clicks outside the content area
+- `useWindowResize` hook takes no arguments and returns the window's _width_ and _height_ in real time whenever its resized
+- Custom Hooks Design
+
+  ![Custom Hooks Design](./StaticImages/custom-hooks-design.png)
