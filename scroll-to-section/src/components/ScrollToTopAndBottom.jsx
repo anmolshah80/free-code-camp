@@ -1,10 +1,11 @@
-import { AiOutlineLoading } from 'react-icons/ai';
-import { FaChevronCircleDown, FaChevronCircleUp } from 'react-icons/fa';
+import { useRef } from 'react';
 
 import useFetch from 'hooks/useFetch';
 
+import { AiOutlineLoading } from 'react-icons/ai';
+import { FaChevronCircleDown, FaChevronCircleUp } from 'react-icons/fa';
+
 import './styles.css';
-import { useRef } from 'react';
 
 const RenderProducts = ({ data }) => {
   if (!data) return null;
@@ -15,13 +16,11 @@ const RenderProducts = ({ data }) => {
 
   return (
     <ul className="products-container">
-      {products.map((product) => {
-        return (
-          <li key={product.id}>
-            <p className="product-title">{product.title}</p>
-          </li>
-        );
-      })}
+      {products.map((product) => (
+        <li key={product.id}>
+          <p className="product-title">{product.title}</p>
+        </li>
+      ))}
     </ul>
   );
 };
@@ -60,11 +59,11 @@ const ScrollToTopAndBottom = () => {
         <RenderProducts data={data} />
         <div className="scroll-icons-container">
           <FaChevronCircleDown
-            className="scroll-bottom-icon"
+            className="scroll-icon scroll-bottom-icon"
             onClick={handleScrollToBottom}
           />
           <FaChevronCircleUp
-            className="scroll-top-icon"
+            className="scroll-icon scroll-top-icon"
             onClick={handleScrollToTop}
           />
         </div>

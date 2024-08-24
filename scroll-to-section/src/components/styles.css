@@ -57,7 +57,7 @@
   justify-content: space-between;
 }
 
-.scroll-bottom-icon {
+.scroll-icon {
   width: 3rem;
   height: 3rem;
   color: #003b46;
@@ -65,11 +65,7 @@
 }
 
 .scroll-top-icon {
-  width: 3rem;
-  height: 3rem;
   margin-bottom: 4.5rem;
-  color: #003b46;
-  cursor: pointer;
 }
 
 .scroll-button {
