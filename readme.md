@@ -134,8 +134,11 @@ _Important Notes:_
 ### Project XVIII - Scroll to Section
 
 - Implement the feature to _scroll to top_ and _scroll to bottom_ when clicking on the icons at the top and bottom of the page respectively
+- Implement the feature to scroll to a particular section after clicking a button
 - Create a `useFetch` custom hook to get data from an API
 - JSON data taken from [Dummy JSON API](https://dummyjson.com/products?limit=100)
-- Scroll to Section Design
+- Scroll to Section Designs
 
   ![Scroll to Top and Bottom Design](./StaticImages/scroll-to-top-and-bottom-design.png)
+
+  ![Scroll to Section Design](./StaticImages/scroll-to-section-design.png)
