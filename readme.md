@@ -130,3 +130,12 @@ _Important Notes:_
 - Custom Hooks Design
 
   ![Custom Hooks Design](./StaticImages/custom-hooks-design.png)
+
+### Project XVIII - Scroll to Section
+
+- Implement the feature to _scroll to top_ and _scroll to bottom_ when clicking on the icons at the top and bottom of the page respectively
+- Create a `useFetch` custom hook to get data from an API
+- JSON data taken from [Dummy JSON API](https://dummyjson.com/products?limit=100)
+- Scroll to Section Design
+
+  ![Scroll to Top and Bottom Design](./StaticImages/scroll-to-top-and-bottom-design.png)
