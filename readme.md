@@ -142,3 +142,12 @@ _Important Notes:_
   ![Scroll to Top and Bottom Design](./StaticImages/scroll-to-top-and-bottom-design.png)
 
   ![Scroll to Section Design](./StaticImages/scroll-to-section-design.png)
+
+### Project XIX - Weather App
+
+- Show weather details in a card using the weather data from an API
+- Weather data has been taken from [Open Weather Map API](https://openweathermap.org/current)
+- Type the `/` (forward slash) key to focus on the search input bar automatically to enter your preferred city's or country's name
+- Weather App Design
+
+  ![Weather App Design](./StaticImages/weather-app-design.png)
