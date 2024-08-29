@@ -88,6 +88,8 @@ const WeatherDetails = () => {
     fetchWeatherData(searchValue, setLoading, setErrorMessage, setWeatherData);
 
     setErrorMessage(null);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

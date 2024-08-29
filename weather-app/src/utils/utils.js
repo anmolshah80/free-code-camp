@@ -4,7 +4,6 @@ const formatCurrentDate = () => {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
-    day: 'numeric',
   });
 };
 
