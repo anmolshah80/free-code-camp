@@ -1,4 +1,4 @@
-const currentDate = () => {
+const formatCurrentDate = () => {
   return new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     month: 'long',
@@ -28,4 +28,4 @@ const weatherDescription = (weatherArray) => {
   });
 };
 
-export { currentDate, pascalizeString, weatherDescription };
+export { formatCurrentDate, pascalizeString, weatherDescription };

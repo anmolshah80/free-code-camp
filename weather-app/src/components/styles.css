@@ -49,12 +49,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  margin-bottom: 1.875rem;
+  margin-top: 0.625rem;
 }
 
 .search-city {
-  border: 2px solid #6082b6;
+  border: 0.125rem solid #6082b6;
   border-right: none;
   outline: none;
   width: 18rem;
@@ -66,15 +66,15 @@ body {
 
 .search-button {
   border: none;
-  border-radius: 3px;
+  border-radius: 0.188rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: #005b8f;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25rem;
   outline: none;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 0.625rem 0.938rem;
 }
 
 .search-button:hover {
@@ -87,11 +87,11 @@ body {
 
 .weather-details-container {
   text-align: center;
-  margin: 50px auto 50px;
+  margin: 3.125rem auto 3.125rem;
   width: 90%;
-  max-width: 700px;
-  border-radius: 20px;
-  padding: 20px 15px 0px;
+  max-width: 43.75rem;
+  border-radius: 1.25rem;
+  padding: 1.25rem 0.938rem 0;
   background-color: #4682b4;
   color: #ffffff;
 }
@@ -101,14 +101,14 @@ body {
 }
 
 .date {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   font-style: italic;
   margin-block: 1rem;
 }
 
 .temperature {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: bold;
   text-align: center;
   margin-block: 0;
@@ -118,9 +118,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin-top: 20px;
-  padding: 0px;
-  font-size: 20px;
+  margin-top: 1.25rem;
+  padding: 0;
+  font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
 }
@@ -135,13 +135,28 @@ body {
 }
 
 .column-label {
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
 }
 
 .column-value {
-  font-size: 30px;
+  font-size: 1.875rem;
   margin: 0;
+}
+
+.descriptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-block: 1.5rem;
+}
+
+.descriptions > img {
+  width: 2rem;
+  height: 2rem;
 }
 
 .description-container {
@@ -149,18 +164,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
-  font-size: 22px;
+  font-size: 1.275rem;
   font-weight: 500;
-  margin-block: 1.5rem;
 }
 
 .description-container > p {
   margin: 0;
-}
-
-.description-container > img {
-  width: 2rem;
-  height: 2rem;
 }
 
 .search-input-container {

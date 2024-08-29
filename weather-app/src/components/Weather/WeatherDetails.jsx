@@ -3,10 +3,26 @@ import { useEffect, useState } from 'react';
 import { AiOutlineLoading } from 'react-icons/ai';
 
 import fetchWeatherData from 'lib/fetchWeatherData';
-import { currentDate, weatherDescription } from 'utils/utils';
+import { formatCurrentDate, weatherDescription } from 'utils/utils';
 
 import Search from 'components/Search/Search';
 import 'components/styles.css';
+
+const ShowDescriptionsWithIcons = ({ weatherArray }) => {
+  // attach an image for each of these individual pascalized descriptions
+  const pascalizedDescriptionArray = weatherDescription(weatherArray);
+
+  return pascalizedDescriptionArray.map((description, index) => {
+    const imageUrl = `https://openweathermap.org/img/w/${weatherArray[index].icon}.png`;
+
+    return (
+      <div className="description-container">
+        <img src={imageUrl} alt={`${description} icon`} />
+        <p>{description}</p>
+      </div>
+    );
+  });
+};
 
 const ShowWeatherDetails = ({ loading, errorMessage, weatherData }) => {
   if (loading) {
@@ -28,33 +44,17 @@ const ShowWeatherDetails = ({ loading, errorMessage, weatherData }) => {
     wind: { speed: windSpeed },
   } = weatherData;
 
-  const weatherDescriptionWithImage = () => {
-    // attach an image for each of these individual pascalized descriptions
-    const pascalizedDescriptionArray = weatherDescription(weatherArray);
-
-    return pascalizedDescriptionArray.map((description, index) => {
-      const imageUrl = `https://openweathermap.org/img/w/${weatherArray[index].icon}.png`;
-
-      return (
-        <>
-          <img src={imageUrl} alt={`${description} icon`} />
-          <p>{description}</p>
-        </>
-      );
-    });
-  };
-
   return (
     <div className="weather-details-container">
       <div>
         <h2 className="city-details">
           {cityName}, {country}
         </h2>
-        <p className="date">{currentDate()}</p>
+        <p className="date">{formatCurrentDate()}</p>
       </div>
       <p className="temperature">{temperature}°F</p>
-      <div className="description-container">
-        {weatherDescriptionWithImage()}
+      <div className="descriptions">
+        <ShowDescriptionsWithIcons weatherArray={weatherArray} />
       </div>
       <div className="weather-info">
         <div className="column">
