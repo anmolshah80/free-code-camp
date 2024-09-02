@@ -151,3 +151,9 @@ _Important Notes:_
 - Weather App Design
 
   ![Weather App Design](./StaticImages/weather-app-design.png)
+
+### Project XX - Food Recipe App
+
+- App has been created using [vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
+- Path resolving in Vite has been set up using this [article](https://theroadtoenterprise.com/blog/how-to-set-up-path-resolving-in-vite)
+- Food recipes data is available from [Forkify API](https://forkify-api.herokuapp.com/v2)
