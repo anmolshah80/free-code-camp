@@ -157,3 +157,16 @@ _Important Notes:_
 - App has been created using [vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
 - Path resolving in Vite has been set up using this [article](https://theroadtoenterprise.com/blog/how-to-set-up-path-resolving-in-vite)
 - Food recipes data is available from [Forkify API](https://forkify-api.herokuapp.com/v2)
+- Add a home page to render all the recipes based on a search term
+- Add details page to render the details of a recipe from the rendered recipe list
+- Add a favorites page to render all the favorite recipe items
+- Type the `/` (forward slash) key to focus on the search input bar automatically to enter a recipe's name
+- Create a util function to format title of the recipes in PascalCase and in kebab-case
+- Create `searchRecipe` and `searchRecipeByID` lib functions to search for recipes based on a search term and based on its ID respectively, and manage loading and error states within both these functions
+- Food Recipe App Design
+
+  ![Food Recipe App - Home Page Design](./StaticImages/food-recipe-app-home-page-design.png)
+
+  ![Food Recipe App - Details Page Design](./StaticImages/food-recipe-app-details-page-design.png)
+
+  ![Food Recipe App - Favorites Page Design](./StaticImages/food-recipe-app-favorites-page-design.png)
