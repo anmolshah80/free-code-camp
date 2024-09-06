@@ -1,39 +1,53 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 
 import { Tooltip } from 'react-tooltip';
 
-import fetchWeatherData from 'lib/fetchWeatherData';
+import { GlobalContext } from '@/context/GlobalContext';
 
-const Search = ({
-  searchValue,
-  setSearchValue,
-  setErrorMessage,
-  setLoading,
-  setWeatherData,
-}) => {
+import { searchRecipe } from '@/lib/SearchRecipe';
+
+const Search = () => {
   const searchInputRef = useRef(null);
-  const slashKeyCounterRef = useRef(null);
+  const slashKeyCounterRef = useRef(0);
 
   const [slashHotkeyClassName, setSlashHotkeyClassName] = useState('slash-key');
+
+  const {
+    searchParam,
+    setSearchParam,
+    setLoading,
+    setErrorMessage,
+    setRecipes,
+    navigate,
+  } = useContext(GlobalContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!searchValue) return;
+    if (!searchParam) return;
+
+    setRecipes([]);
 
     setErrorMessage(null);
     setSlashHotkeyClassName('slash-key');
 
     slashKeyCounterRef.current = 0;
 
-    fetchWeatherData(searchValue, setLoading, setErrorMessage, setWeatherData);
+    searchRecipe(
+      searchParam,
+      setSearchParam,
+      setLoading,
+      setErrorMessage,
+      setRecipes,
+      navigate,
+    );
 
     // hide the slash key from the search input bar since the input bar is still in focus after the api call
     setSlashHotkeyClassName('slash-key-hide');
   };
 
   useEffect(() => {
-    // focus on the search bar whenever `/` (forward slash) is pressed
+    // focus on the search bar whenever `/` (forward slash) key is pressed
     const focusElementWithHotkey = (event) => {
       if (event.key !== '/') return;
 
@@ -60,12 +74,12 @@ const Search = ({
       <div className="search-input-container">
         <input
           type="text"
-          className="search-city"
-          placeholder="Enter a city or country name"
-          name="search-city"
-          value={searchValue}
+          className="search-input"
+          placeholder="Enter a food item"
+          name="search"
+          value={searchParam}
           ref={searchInputRef}
-          onChange={(event) => setSearchValue(event.target.value)}
+          onChange={(event) => setSearchParam(event.target.value)}
           onBlur={() => {
             slashKeyCounterRef.current = 0;
             setSlashHotkeyClassName('slash-key');
