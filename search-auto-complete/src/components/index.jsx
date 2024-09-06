@@ -120,7 +120,7 @@ const SearchAutoComplete = () => {
         <span
           className={slashHotkeyClassName}
           data-tooltip-id="slash-hotkey"
-          data-tooltip-content="Type / to search"
+          data-tooltip-content="Press / to start typing"
           data-tooltip-place="top"
         >
           /
