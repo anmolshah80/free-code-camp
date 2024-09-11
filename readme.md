@@ -151,3 +151,5 @@ _Important Notes:_
 - Weather App Design
 
   ![Weather App Design](./StaticImages/weather-app-design.png)
+
+### Project XXI - Shopping Cart App
