@@ -54,7 +54,7 @@ const Search = () => {
       if (slashKeyCounterRef.current === 0) {
         event.preventDefault();
         searchInputRef.current.focus();
-        slashKeyCounterRef.current += 1;
+        slashKeyCounterRef.current = 1;
 
         return;
       }

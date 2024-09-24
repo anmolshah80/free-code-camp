@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { AiOutlineLoading } from 'react-icons/ai';
 
 import { GlobalContext } from '@/context/GlobalContext';
+
 import { searchRecipeByID } from '@/lib/SearchRecipe';
 import { formatRecipeTitleInPascalCase } from '@/utils/formatRecipeTitles';
 
@@ -89,10 +90,12 @@ const FoodRecipeDetails = () => {
     cooking_time: cookingTime,
   } = currentRecipe;
 
+  const formattedRecipeTitle = formatRecipeTitleInPascalCase(title);
+
   return (
     <div className="container mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-5">
       <h1 className="font-bold truncate text-black text-center text-4xl">
-        {formatRecipeTitleInPascalCase(title)}
+        {formattedRecipeTitle}
       </h1>
       <div className="row-start-2 lg:row-start-auto">
         <a
@@ -106,7 +109,7 @@ const FoodRecipeDetails = () => {
         <div className="h-96 overflow-hidden rounded-xl group">
           <img
             src={imageUrl}
-            alt={`${title}'s recipe image`}
+            alt={`${formattedRecipeTitle}'s recipe`}
             className="w-full h-full object-cover block group-hover:scale-105 duration-300"
           />
         </div>
