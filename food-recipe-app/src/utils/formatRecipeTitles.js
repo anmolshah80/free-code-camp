@@ -4,9 +4,9 @@ const formatRecipeTitleInPascalCase = (title) => {
 
   const formattedTitle = splitTitle.map((string) => {
     if (string === '&amp;') {
-      string = '&';
-    } else if (string === 'And') {
-      return string[0].toLowerCase() + string.slice(1);
+      return '&';
+    } else if (string === 'and') {
+      return string;
     }
 
     return string[0].toUpperCase() + string.slice(1);
@@ -20,7 +20,7 @@ const formatRecipeTitlesInKebabCase = (title) => {
 
   const formattedTitle = splitTitle.map((string) => {
     if (string === '&amp;') {
-      string = 'and';
+      return 'and';
     } else if (string[string.length - 1] === ',') {
       const modifiedString = string.slice(0, string.length - 1);
 
