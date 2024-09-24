@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import GlobalState from '@/context/GlobalContext.jsx';
 
-import App from './App.jsx';
+import App from '@/App.jsx';
 
-import './index.css';
+import '@/index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
